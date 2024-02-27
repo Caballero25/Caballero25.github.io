@@ -127,7 +127,7 @@ nav {
     text-align: center;
 }
 
-.title-text p {
+.title-text h1 {
     color: white;
     font-size: 24px;
 }
@@ -159,7 +159,7 @@ nav {
     .menu li a {
         font-size: 16px;
     }
-    .title-text p {
+    .title-text h1 {
         font-size: 19px;
     }
 }
@@ -191,7 +191,10 @@ nav {
         justify-content:space-between;
     }
     @media only screen and (max-width: 480px) {
-        .title-text p {
+        .title-text {
+            height: 20px;
+        }
+        .title-text h1 {
             font-size: 14px;
         }
         .responsivePhone {
@@ -232,20 +235,22 @@ nav {
         .dropdown-content {
             min-width: 130px;
         }
+        .title-text h1{
+            font-size: 12px;
+        }
     }
-    @media only screen and (max-width: 285px) {
+    @media only screen and (max-width: 299px) {
         .dropdown-content {
             min-width: 100px;
         }
         .title-text {
             padding-bottom: 30px;
         }
-        .title-text p{
+        .title-text h1{
             font-size: 12px;
         }
         .menu li div a.liContacto {
             font-size: 12.5px;
         }
     }
-}
-
+} 
