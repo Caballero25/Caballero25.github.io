@@ -1,4 +1,4 @@
-  function cargarContenido(event, seccion) {
+function cargarContenido(event, seccion) {
     var seccionNueva = seccion;
     sessionStorage.setItem('cargarSeccion', seccionNueva);
     var xhr = new XMLHttpRequest();
@@ -33,18 +33,18 @@ function cargarStorage(seccion) {
     xhr.send();
 }
 var seccionActual = sessionStorage.getItem('cargarSeccion');
-if (seccionActual == null || seccionActual == ""){
-    document.addEventListener("DOMContentLoaded", function() {
+if (seccionActual == null || seccionActual == "") {
+    document.addEventListener("DOMContentLoaded", function () {
         cargarStorage("Templates/inicio");
-      });
+    });
 } else {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         var seccionActual = sessionStorage.getItem('cargarSeccion');
         cargarStorage(seccionActual);
-      });
+    });
 }
 
-function preventRedirection(event){
+function preventRedirection(event) {
     event.preventDefault();
 }
 

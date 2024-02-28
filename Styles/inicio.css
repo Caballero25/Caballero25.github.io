@@ -372,6 +372,9 @@
     width: 100%;
     background-image: url("/Media/inicio/seccion\ 2\ responsive\ patron.png");
 }
+.separatorDown {
+    height: 70px;
+}
 .secondSectionLeffText p {
     font-size: 2.1vw;
     color: #014257;
@@ -456,9 +459,146 @@
     }
 }
 
+/*ESTYLES THIRD SECTION INICIO */
+.sectionThree {
+    margin-top: 100px;
+}
+.sectionThreePros {
+    padding: 40px 10px 30px 10px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sectionThreePros h2 {
+    width: 100%;
+    text-align: center;
+}
+.sectionThreeProsSeparator {
+    margin-top: 8px;
+    height: 4px;
+    width: 80%;
+    background-color: #4a6eb0;
+}
 
+.sectionThreeSlider {
+    background-image: linear-gradient(to top right, #4a6eb0, #0799b6);
+    min-height: 700px;
+    margin-top: 0px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.slider {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
 
+.item {
+    position: absolute;
+    width: 300px;
+    height: 530px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    transition: 0.5s;
+    left: calc(50% - 160px);
+    top: 0;
+}
 
+.item h3 {
+    margin-top: -5px;
+    height: 60px;
+    font-size: 39px;
+}
 
+.item p {
+    padding-top: 30px;
+    font-size: 22px;
+}
 
+#next {
+    position: absolute;
+    right: 20%;
+    top: 40%;
+}
+
+#prev {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
+
+#prev,
+#next {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#prev:hover,
+#next:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .sectionThreeSlider {
+        min-height: 600px;
+    }
+
+    .slider {
+        margin-top: 95px;
+        min-height: 600px;
+        width: 100%;
+    }
+
+    #next {
+        right: 50px;
+        margin-top: 300px;
+    }
+
+    #prev {
+        left: 50px;
+        margin-top: 300px;
+    }
+
+    #prev,
+    #next {
+        font-size: 50px;
+    }
+
+    .item {
+        min-height: 480px;
+        width: 250px;
+        padding: 15px;
+        transition: 0.5s;
+        left: calc(50% - 122.5px);
+    }
+
+    .item h3 {
+        font-size: 30px;
+    }
+
+    .item p {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (min-width: 854px) {
+    #next {
+        margin-top: 40px;
+    }
+
+    #prev {
+        margin-top: 40px;
+    }
+}
