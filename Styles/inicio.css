@@ -535,14 +535,16 @@
 
 #prev,
 #next {
-    color: #fff;
     background: none;
     border: none;
-    font-size: 65px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    opacity: 0.5;
+    opacity: 0.55;
     transition: opacity 0.5s;
+}
+
+#prev img, #next img {
+    width: 80px;
 }
 
 #prev:hover,
