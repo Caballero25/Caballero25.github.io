@@ -48,8 +48,29 @@ function preventRedirection(event) {
     event.preventDefault();
 }
 
-var enlaceWhatsapp = "https://wa.me/573155058792?text=Hola,%20me%20interesa%20obtener%20una%20cotizacion%20personalizada";
-var enlacesPrincipales = document.getElementsByClassName("iniciarConversacion");
-for (var i = 0; i < enlacesPrincipales.length; i++) {
-    enlacesPrincipales[i].href = enlaceWhatsapp;
+//ENLACES
+var enlaceWhatsapp = "https://wa.me/573155058792?text=Estoy%20interesado%20en%20recibir%20una%20cotización%20personalizada%20para%20encargar%20un%20proyecto%20académico.";
+var enlaceLinkedin = "https://www.linkedin.com/in/jos%C3%A9-david-caballero-mej%C3%ADa-207b13234/"
+var enlaceGmail = "mailto:davidcame124@gmail.com?subject=Cotización%20personalizada%20CEAC.&body=Estoy%20interesado%20en%20recibir%20una%20cotización%20personalizada%20para%20encargar%20un%20proyecto%20académico."
+var enlaceInstagram = "https://www.instagram.com/dvidcaballero/"
+//WhatsApp
+var whatsappButtons = document.getElementsByClassName("whatsaapURL");
+for (var i = 0; i < whatsappButtons.length; i++) {
+    whatsappButtons[i].href = enlaceWhatsapp;
 }
+//Linkedin
+var linkedinButtons = document.getElementsByClassName("linkedinURL");
+for (var i = 0; i < linkedinButtons.length; i++) {
+    linkedinButtons[i].href = enlaceLinkedin;
+}
+//Gmail
+var gmailButtons = document.getElementsByClassName("gmailURL");
+for (var i = 0; i < gmailButtons.length; i++) {
+    gmailButtons[i].href = enlaceGmail;
+}
+//Instagram
+var instagramButtons = document.getElementsByClassName("instagramURL");
+for (var i = 0; i < instagramButtons.length; i++) {
+    instagramButtons[i].href = enlaceInstagram;
+}
+//FÍN ENLACES
