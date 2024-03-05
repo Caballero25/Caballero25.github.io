@@ -11,6 +11,10 @@ const callback = function (mutationsList, observer) {
             case "inicio":
                 sliderLoader();
                 break;
+            case "conocenos":
+                mostrarMas();
+                startCounter();
+                break;
         }
     }
 };
