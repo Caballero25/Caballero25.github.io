@@ -1,0 +1,405 @@
+.faqsFirstSection {
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.faqsFirstSectionTitleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.faqsFirstSectionTitleContainer p {
+    font-size: 60px;
+    font-weight: bold;
+    color: #4a6eb0;
+}
+
+.faqsFirstSectionImgContainer {
+    height: 100%;
+}
+
+.faqsFirstSectionImgContainer img {
+    height: 100%;
+}
+
+
+
+
+#faqsSecondSection {
+    background-color: #f5f5f5;
+    min-height: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#faqsSecondSection ol,
+#faqsSecondSection ol::before,
+#faqsSecondSection ol::after,
+#faqsSecondSection ol *,
+#faqsSecondSection ol *::before,
+#faqsSecondSection ol *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#faqsSecondSection ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    width: min(60rem, calc(100% - 2rem));
+    margin-inline: auto;
+    padding-block: 1rem;
+    list-style: none;
+    counter-reset: count;
+}
+
+/* card layout/styling */
+#faqsSecondSection ol>li {
+    --card-background-color: #f0f0f0;
+    --card-text-color: #0F0F0F;
+    --card-border-radius: 0.5rem;
+    --card-padding-block: 1.5rem;
+    --card-padding-inline: 1rem;
+    --outset-size: 0.75rem;
+    --outset-background-color: #e5e5e5;
+    --number-font-size: 3rem;
+    --number-overlap: 0.5rem;
+    --number-font-weight: 500;
+    margin: var(--outset-size);
+    margin-top: calc(var(--number-font-size) - var(--number-overlap));
+    border-radius: var(--card-border-radius);
+    padding-block: var(--card-padding-block);
+    padding-inline: var(--card-padding-inline);
+    color: var(--card-text-color);
+    background-color: var(--card-background-color);
+    box-shadow:
+        inset 1px 1px 0px rgb(255 255 255 / .5),
+        inset -1px -1px 0px rgb(0 0 0 / .25),
+        calc(var(--outset-size) * .25) calc(var(--outset-size) * .25) calc(var(--outset-size) * .5) rgb(0 0 0 / .25);
+    position: relative;
+    counter-increment: count;
+}
+
+#faqsSecondSection ol>li::after {
+    content: counter(count, decimal-leading-zero);
+    position: absolute;
+    bottom: calc(100% - var(--number-overlap));
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--accent-color);
+    font-family: var(--number-font-family);
+    font-weight: var(--number-font-weight);
+    font-size: var(--number-font-size);
+    line-height: 1;
+    z-index: 1;
+    margin-bottom: 5px;
+}
+
+#faqsSecondSection ol>li::before {
+    content: "";
+    position: absolute;
+    width: calc(50% + (var(--outset-size) * 2));
+    height: 90%;
+    bottom: calc(var(--outset-size) * -0.1);
+    left: calc(var(--outset-size) * -1);
+    box-shadow: -10px 5px var(--accent-color);
+}
+
+/* card content */
+#faqsSecondSection .faqsSecondSectionTitle {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#faqsSecondSection .icon {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: calc(var(--card-padding-block) * .5);
+}
+
+#faqsSecondSection .title {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+#faqsSecondSection .descr {
+    color: var(--text-color);
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+/******* FAQS ***********/
+.faqsThirdSection {
+    padding-top: 25px;
+    padding-bottom: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    background-image: url("/Media/faqs/patronFaqs.png");
+}
+
+.faqsThirdSection > :first-child {
+  align-self: flex-start;
+}
+
+.faqsThirdSection > :last-child {
+  align-self: flex-end;
+}
+
+.faqsThirdSectioncontainer {
+    border: 1px solid #4a6eb0;
+    border-radius: 7px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+.faqsThirdSectionaccordion {
+    .faqsThirdSectionaccordion-item {
+        border-bottom: 1px solid #e5e5e5;
+
+        .faqsThirdSectionacordionButton[aria-expanded='true'] {
+            border-bottom: 1px solid #03b5d2;
+        }
+    }
+
+    .faqsThirdSectionacordionButton {
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: #7288a2;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: #03b5d2;
+
+            &::after {
+                cursor: pointer;
+                color: #03b5d2;
+                border: 1px solid #03b5d2;
+            }
+        }
+
+        .faqsThirdSectionaccordion-title {
+            padding: 1em 1.5em 1em 0;
+        }
+
+        .faqsThirdSectionicon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 9px;
+                left: 5px;
+                width: 10px;
+                height: 2px;
+                background: currentColor;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 5px;
+                left: 9px;
+                width: 2px;
+                height: 10px;
+                background: currentColor;
+            }
+        }
+    }
+
+    .faqsThirdSectionacordionButton[aria-expanded='true'] {
+        color: #03b5d2;
+
+        .icon {
+            &::after {
+                width: 0;
+            }
+        }
+
+        +.faqsThirdSectionaccordion-content {
+            opacity: 1;
+            max-height: 90em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+    }
+
+    .faqsThirdSectionaccordion-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+    }
+}
+
+.faqsThirdSectionacordionButton:first-child {
+    padding-right: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .faqsThirdSection {
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .faqsThirdSection {
+        width: 100%;
+        display: block;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .faqsThirdSectioncontainer {
+        padding: 1rem;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .faqsFirstSection {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .faqsFirstSectionTitleContainer p {
+        font-size: 35px;
+    }
+
+    .faqsFirstSectionImgContainer {
+        width: 180px;
+    }
+
+    .faqsFirstSectionImgContainer img {
+        width: 100%;
+        height: 253px;
+    }
+
+    #faqsSecondSection {
+        padding-left: 10px;
+    }
+    #faqsSecondSection ol {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+    
+    .faqsThirdSectioncontainer {
+        padding: 1rem;
+        width: 90%;
+    }
+    
+}
+
+
+.fourthSectioncontainer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background-color: #014257;
+  }
+
+.fourthSectioncontainer h3{
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: white;
+}
+  
+  .fourthSectionBtn {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+  }
+  
+  .fourthSectionBtn {
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fourthSectionBtn:hover {
+    box-shadow: 1px 1px 25px 10px rgba(37, 211, 102, 0.4);
+  }
+  
+  .fourthSectionBtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(37, 211, 102, 0.4),
+      transparent
+    );
+    transition: all 650ms;
+  }
+  
+  .fourthSectionBtn:hover:before {
+    left: 100%;
+  }
+  

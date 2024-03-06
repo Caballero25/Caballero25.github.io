@@ -51,7 +51,7 @@ function startCounter() {
   function handleScroll() {
     var anchoPantalla = window.innerWidth
     if (anchoPantalla < 600) {
-      var subtTrigger = 300
+      var subtTrigger = 200
     } else {
       var subtTrigger = 550
     }

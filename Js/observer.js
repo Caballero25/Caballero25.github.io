@@ -15,6 +15,8 @@ const callback = function (mutationsList, observer) {
                 mostrarMas();
                 startCounter();
                 break;
+            case "faqs":
+                faqsDesplazables();
         }
     }
 };
