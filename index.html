@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/nav.css">
-    <link rel="stylesheet" href="/Styles/inicio.css">
-    <link rel="stylesheet" href="/Styles/conocenos.css">
-    <link rel="stylesheet" href="/Styles/faqs.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/nav.css" />
+    <link rel="stylesheet" href="/Styles/inicio.css" />
+    <link rel="stylesheet" href="/Styles/conocenos.css" />
+    <link rel="stylesheet" href="/Styles/faqs.css" />
+    <link rel="stylesheet" href="/Styles/servicios.css" />
     <title>CEAC</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav class="navigator">
-            <div class="logo-container">
-                <img src="https://media.discordapp.net/attachments/1085674144538034228/1211031173535367188/image.png?ex=65ecb7ab&is=65da42ab&hm=42e5b374bc4afbd37077e352e3d8711f848fc74b17195d73fef9757b460fc4ce&=&format=webp&quality=lossless" alt="Logo">
-                <p>CEAC</p>
-            </div>
-            <ul class="menu">
-                <li><a href="#" onclick="cargarContenido(event, 'Templates/inicio')">Inicio</a></li>
-                <li><a href="#" onclick="cargarContenido(event,'Templates/conocenos')">Conócenos</a></li>
-                <li><a href="#" onclick="cargarContenido(event,'Templates/preguntasfrecuentes')">FAQS</a></li>
-                <li class="dropdown">
-                    <a href="#" onclick="preventRedirection(event)">Áreas de Servicio &#9660;</a>
-                    <div class="dropdown-content">
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Derecho</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Arquitectura</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Software</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Medicina</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Contaduria</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Ingeniería</a>
-                        <a href="#" class="desplegable" onclick="preventRedirection(event)">Inglés</a>
-                    </div>
-                </li>
-                <!--Menú responsive-->
-                <li class="dropdown menuResponsive">
-                    <a href="#" onclick="preventRedirection(event)">Navegación &#9776;</a>
-                    <div class="dropdown-content">
-                        <a href="#" class="desplegable" onclick="cargarContenido(event, 'Templates/inicio')">Inicio</a>
-                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/conocenos')">Conócenos</a>
-                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/preguntasfrecuentes')">FAQS</a>
-                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/servicios')">Aréas de servicio</a>
-                        <a href="#" class="liContacto responsivePhone whatsaapURL" target="_blank">CONTÁCTANOS</a>
-                    </div>
-                </li>
-                <li><a href="#" class="liContacto responsiveDesktop whatsaapURL" target="_blank">CONTÁCTANOS</a></li>
-            </ul>
-        </nav>
-        <div class="title-text">
-            <h1>CENTRO DE SOLUCIONES ACADÉMICAS</h1>
+      <nav class="navigator">
+        <div class="logo-container">
+          <img
+            src="https://media.discordapp.net/attachments/1085674144538034228/1211031173535367188/image.png?ex=65ecb7ab&is=65da42ab&hm=42e5b374bc4afbd37077e352e3d8711f848fc74b17195d73fef9757b460fc4ce&=&format=webp&quality=lossless"
+            alt="Logo"
+          />
+          <p>CEAC</p>
         </div>
+        <ul class="menu">
+          <li>
+            <a href="#" onclick="cargarContenido(event, 'Templates/inicio')"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="cargarContenido(event,'Templates/conocenos')"
+              >Conócenos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              onclick="cargarContenido(event,'Templates/preguntasfrecuentes')"
+              >FAQS</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="cargarContenido(event,'Templates/servicios')"
+              >Aréas de servicio</a
+            >
+          </li>
+          <!--Menú responsive-->
+          <li class="dropdown menuResponsive">
+            <a href="#" onclick="preventRedirection(event)"
+              >Navegación &#9776;</a
+            >
+            <div class="dropdown-content">
+              <a
+                href="#"
+                class="desplegable"
+                onclick="cargarContenido(event, 'Templates/inicio')"
+                >Inicio</a
+              >
+              <a
+                href="#"
+                class="desplegable"
+                onclick="cargarContenido(event,'Templates/conocenos')"
+                >Conócenos</a
+              >
+              <a
+                href="#"
+                class="desplegable"
+                onclick="cargarContenido(event,'Templates/preguntasfrecuentes')"
+                >FAQS</a
+              >
+              <a
+                href="#"
+                class="desplegable"
+                onclick="cargarContenido(event,'Templates/servicios')"
+                >Aréas de servicio</a
+              >
+              <a
+                href="#"
+                class="liContacto responsivePhone whatsaapURL"
+                target="_blank"
+                >CONTÁCTANOS</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="liContacto responsiveDesktop whatsaapURL"
+              target="_blank"
+              >CONTÁCTANOS</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="title-text">
+        <h1>CENTRO DE SOLUCIONES ACADÉMICAS</h1>
+      </div>
     </header>
 
-
     <section id="PrincipalSectionContent">
-        <div id="contenido">
-            
-        </div>
+      <div id="contenido"></div>
     </section>
 
     <footer>
-        <img class="footerLogo" src="/Media/general/ceac_logo-footer.png">
-        <div class="footerText">
-          <h2>
-            CENTRO DE SOLUCIONES ACADÉMICAS
-          </h2>
-          <img src="/Media/general/linea_footer__text_ceac.png">
-        </div>
-        <div class="footerSocialNetwork">
-            <a class="instagramURL" target="_blank" href="#"><img src="/Media/general/instagram.png"></a>
-            <a class="linkedinURL" target="_blank" href="#"><img src="/Media/general/linkedin.png"></a>
-            <a class="whatsaapURL" target="_blank" href="#"><img src="/Media/general/whatsaap.png"></a>
-            <a class="gmailURL" target="_blank" href="#"><img src="/Media/general/email.png"></a>
-          </div>
-        <p class="footerCopy">&copy; 2024 Centro de Soluciones Académicas</p>
-      </footer>
-    
+      <img class="footerLogo" src="/Media/general/ceac_logo-footer.png" />
+      <div class="footerText">
+        <h2>CENTRO DE SOLUCIONES ACADÉMICAS</h2>
+        <img src="/Media/general/linea_footer__text_ceac.png" />
+      </div>
+      <div class="footerSocialNetwork">
+        <a class="instagramURL" target="_blank" href="#"
+          ><img src="/Media/general/instagram.png"
+        /></a>
+        <a class="linkedinURL" target="_blank" href="#"
+          ><img src="/Media/general/linkedin.png"
+        /></a>
+        <a class="whatsaapURL" target="_blank" href="#"
+          ><img src="/Media/general/whatsaap.png"
+        /></a>
+        <a class="gmailURL" target="_blank" href="#"
+          ><img src="/Media/general/email.png"
+        /></a>
+      </div>
+      <p class="footerCopy">&copy; 2024 Centro de Soluciones Académicas</p>
+    </footer>
+
     <script src="Js/secciones.js"></script>
     <script src="Js/sliderinicio.js"></script>
     <script src="/Js/conocenos.js"></script>
     <script src="/Js/faqs.js"></script>
+    <script src="/Js/servicios.js"></script>
     <script src="/Js/observer.js"></script>
-</body>
-
+  </body>
 </html>
