@@ -34,7 +34,7 @@ function startCounter() {
             clearInterval(interval);
           }
           counter.textContent = current;
-        }, 550); // Intervalo de tiempo mayor para el primer contador
+        }, 150); // Intervalo de tiempo mayor para el primer contador
       } else {
         interval = setInterval(function() {
           current += increment;
@@ -43,7 +43,7 @@ function startCounter() {
             clearInterval(interval);
           }
           counter.textContent = current;
-        }, 100.67); // Intervalo de tiempo para 60fps
+        }, 40); // Intervalo de tiempo para 60fps
       }
     });
   }

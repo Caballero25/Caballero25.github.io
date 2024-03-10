@@ -17,6 +17,8 @@ const callback = function (mutationsList, observer) {
                 break;
             case "faqs":
                 faqsDesplazables();
+            case "servicios":
+                break;
         }
     }
 };
