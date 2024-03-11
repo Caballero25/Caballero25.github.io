@@ -48,6 +48,23 @@ function preventRedirection(event) {
     event.preventDefault();
 }
 
+var cerrarModal = document.querySelector(".botonCerrarModal")
+var chatModal = document.querySelector(".chatModal")
+var enlace = document.querySelector(".footerEnviarLink")
+
+enlace.href="https://wa.me/573155058792?text=Estoy%20interesado%20en%20recibir%20una%20cotización%20personalizada%20para%20encargar%20un%20proyecto%20académico.";
+
+function mostrarChatModal() {
+    if (cerrarModal.classList.contains("mostrarChatModal")){
+        cerrarModal.classList.remove("mostrarChatModal");
+        chatModal.classList.remove("mostrarChatModal");
+    } else {
+        cerrarModal.classList.add("mostrarChatModal");
+        chatModal.classList.add("mostrarChatModal");
+    }
+}
+
+
 //ENLACES
 var enlaceWhatsapp = "https://wa.me/573155058792?text=Estoy%20interesado%20en%20recibir%20una%20cotización%20personalizada%20para%20encargar%20un%20proyecto%20académico.";
 var enlaceLinkedin = "https://www.linkedin.com/in/jos%C3%A9-david-caballero-mej%C3%ADa-207b13234/"
