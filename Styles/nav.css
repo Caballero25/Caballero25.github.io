@@ -553,7 +553,7 @@ svg {
 
 .footerMensaje {
     width: 160px;
-    min-height: 47px;
+    min-height: 63px;
     display: flex;
     flex-direction: row;
     align-items: center;
