@@ -380,11 +380,13 @@ footer {
     align-self: flex-end;
     width: 40px;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 0;
     border: 0;
     opacity: 0;
+    display: none;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .botonCerrarModal button {
@@ -409,6 +411,9 @@ footer {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+    display: none;
 }
 
 svg {
@@ -449,6 +454,7 @@ svg {
 
 
 /* HEADER CHAT */
+
 
 .chatModal header {
     border-radius: 5px 5px 0 0;
@@ -606,6 +612,9 @@ svg {
 }
 
 .mostrarChatModal {
+    display: block;
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+    z-index: 1;
 }
