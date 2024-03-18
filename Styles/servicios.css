@@ -15,11 +15,8 @@
 }
 
 .background-texture {
-    background: -webkit-gradient(linear,
-            left bottom,
-            left top,
-            from(#0f0140e6),
-            to(rgba(117, 63, 210, 0.9)));
+    background: -webkit-gradient(linear, left bottom, left top, from(#4a6eb0), to(#f2e6cf));
+    background: -o-linear-gradient(bottom, #4a6eb0, #f2e6cf);
     background: linear-gradient(to top, #4a6eb0, #f2e6cf);
     background-size: cover;
     width: 100%;
@@ -33,10 +30,19 @@
 .serviciosFirstSectionCategoriesTitle {
     padding-top: 80px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 
@@ -75,9 +81,11 @@
     display: inline-block;
     cursor: pointer;
     -webkit-transition: 1000ms all;
+    -o-transition: 1000ms all;
     transition: 1000ms all;
     -webkit-transform-origin: center left;
-    transform-origin: center left;
+    -ms-transform-origin: center left;
+        transform-origin: center left;
     position: relative;
 }
 
@@ -92,7 +100,8 @@
 
 .carousel__container:hover .carousel-item:hover {
     -webkit-transform: scale(1.5);
-    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
     opacity: 1;
 }
 
@@ -105,16 +114,19 @@
 
 .carousel-item__details {
     background: -webkit-gradient(linear,
-            left bottom,
-            left top,
+            left bottom, left top,
             from(rgba(0, 0, 0, 0.9)),
             to(rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(bottom,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0) 100%);
     background: linear-gradient(to top,
             rgba(0, 0, 0, 0.9) 0%,
             rgba(0, 0, 0, 0) 100%);
     font-size: 10px;
     opacity: 100000;
     -webkit-transition: 450ms opacity;
+    -o-transition: 450ms opacity;
     transition: 450ms opacity;
     padding: 10px;
     position: absolute;
@@ -170,9 +182,16 @@
     padding-bottom: 40px;
     margin-top: 0px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 
@@ -183,26 +202,44 @@
 
 .serviciosSecondSectionContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .tesis {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .articulo {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .monografia {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .investigacion {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .serviciosSecondSectionContainerText {
@@ -289,10 +326,19 @@
 .serviciosThirdSection {
     width: 100%;
     padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 
@@ -307,8 +353,13 @@
 }
 
 .serviciosThirdSectionText {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 500px;
 }
 .serviciosThirdSectionText h2 {
@@ -334,4 +385,17 @@
     .serviciosThirdSectionText {
         width: 100%;
     }
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }
