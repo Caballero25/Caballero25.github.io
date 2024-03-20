@@ -2,10 +2,19 @@
     padding-top: 140px;
     padding-bottom: 140px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     position: relative;
     background-image: url("/Media/conocenos/conocenosDiplomaWeb.webp");
@@ -39,27 +48,49 @@
 .conocenosSecondSection {
     margin-top: 120px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .conocenosSecondSectionContainer {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 }
 
 .conocenosSecondSectionContainerText {
     padding-left: 10px;
     padding-right: 10px;
     width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .conocenosSecondSectionContainer p {
@@ -132,9 +163,16 @@
 .conocenosThirdSection {
     margin-top: 90px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     background-image: url("/Media/inicio/seccion\ 2\ responsive\ patron.png");
     padding-top: 100px;
@@ -157,7 +195,7 @@
 
 
 
-button {
+#botonMostrarMas {
     margin-top: 13px;
     position: relative;
     display: inline-block;
@@ -207,7 +245,9 @@ button {
                         height: 0.625rem;
                         border-top: 0.125rem solid #f2e6cf;
                         border-right: 0.125rem solid #f2e6cf;
-                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
                     }
                 }
             }
@@ -236,7 +276,9 @@ button {
             .icon {
                 &.arrow {
                     background: #f2e6cf;
-                    transform: translate(1rem, 0);
+                    -webkit-transform: translate(1rem, 0);
+                        -ms-transform: translate(1rem, 0);
+                            transform: translate(1rem, 0);
                 }
             }
         }
@@ -266,9 +308,16 @@ button {
 
 .conocenosFourthSectionContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     text-align: center;
 }
 
@@ -310,7 +359,10 @@ button {
         font-size: 15px;
     }
     .conocenosFourthSectionContainer {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     
     .conocenosFourthSectionContainer .counter {
@@ -321,4 +373,705 @@ button {
         padding-top: 40px;
         padding-bottom: 0px;
     }
+}
+
+.logo-container img {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.logo-container p {
+    margin-top: 10%;
+    color: white;
+    font-size: 40px;
+}
+
+.menu {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 30px;
+}
+
+.menu li {
+    margin-left: 40px;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: white;
+            text-decoration-color: white;
+}
+
+.menu li:last-child:hover {
+    text-decoration: none;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu li a.liContacto {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 7%;
+    color: black;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.menu li a.liContacto:hover {
+    background-color: #0799b6;
+    border-radius: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    text-align: center;
+    border-radius: 2%;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a.desplegable {
+    border-bottom: 1px solid black;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    -webkit-transition: 0.52s;
+    -o-transition: 0.52s;
+    transition: 0.52s;
+}
+
+.dropdown-content:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #fbfbfb;
+    font-weight: bold;
+    -webkit-box-shadow: inset 0 0 30px #f2e6cf;
+            box-shadow: inset 0 0 30px #f2e6cf;
+}
+
+.dropdown-content:hover> :first-child {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.title-text {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    padding-bottom: 20px;
+    height: 43px;
+    background-color: #0799b6;
+    text-align: center;
+}
+
+.title-text h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.menuResponsive {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .logo-container img {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .logo-container p {
+        margin-top: 23px;
+        margin-left: -10px;
+        font-size: 25px;
+    }
+
+    .menu li {
+        margin-left: 21px;
+    }
+
+    .dropdown-content {
+        min-width: 140px;
+    }
+
+    .menu li a.liContacto {
+        margin-right: -20px;
+        padding: 5px 10px;
+    }
+
+    .menu li a {
+        font-size: 16px;
+    }
+
+    .title-text h1 {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .responsivePhone {
+        display: none;
+    }
+
+    .menuResponsive {
+        display: block;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .logo-container img {
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .logo-container p {
+        margin-top: 31px;
+        margin-left: -10px;
+        font-size: 25px;
+    }
+
+    .menu>li:nth-child(-n+4) {
+        display: none;
+    }
+
+    .menu> :last-child {
+        margin-top: 3px;
+    }
+
+    .navigator {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .title-text {
+            height: 20px;
+        }
+
+        .title-text h1 {
+            font-size: 14px;
+        }
+
+        .responsivePhone {
+            display: block;
+            border-bottom: 1px solid black;
+        }
+
+        .responsiveDesktop {
+            display: none;
+        }
+
+        .menu li div a.liContacto {
+            border-radius: 0%;
+            background-color: #014257;
+            color: white;
+            padding: 8px 5px;
+            width: 100%;
+        }
+
+        .menu li div a.liContacto:hover {
+            border-radius: 0%;
+            color: black;
+        }
+    }
+
+    @media only screen and (max-width: 365px) {
+        .logo-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+
+        .logo-container img {
+            width: 80px;
+        }
+
+        .logo-container p {
+            margin-top: 10%;
+            color: white;
+            font-size: 20px;
+        }
+
+        .dropdown-content {
+            min-width: 130px;
+        }
+
+        .title-text h1 {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width: 299px) {
+        .dropdown-content {
+            min-width: 100px;
+        }
+
+        .title-text {
+            padding-bottom: 20px;
+        }
+
+        .title-text h1 {
+            font-size: 12px;
+        }
+
+        .menu li div a.liContacto {
+            font-size: 12.5px;
+        }
+    }
+}
+
+
+
+/***** FOOTER *****/ 
+footer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 100px;
+}
+
+.footerLogo {
+    width: 200px;
+}
+
+.footerText h2 {
+    width: 100%;
+    font-size: 20px;
+}
+.footerText img {
+    width: 50%;
+}
+.footerSocialNetwork {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+.footerSocialNetwork a {
+    width: 50px;
+    min-width: 50px;
+}
+.footerSocialNetwork a img {
+    width: 100%;
+}
+.footerCopy {
+    color:rgb(48, 40, 40);
+    margin-top: 80px;
+    font-size:medium;
+}
+
+@media only screen and (max-width: 978px) {
+    .footerText img {
+        width: 65%;
+    }
+    .footerSocialNetwork {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 608px) {
+    .footerText img {
+        width: 75%;
+    }
+    .footerSocialNetwork {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .footerText img {
+        width: 100%;
+    }
+    .footerSocialNetwork {
+        width: 90%;
+    }
+    .footerSocialNetwork {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    .footerSocialNetwork a {
+        width: 40px;
+        min-width: 40px;
+    }
+}
+
+
+
+
+/*GENERALES DE MODAL*/
+
+.chatContainer {
+    position: fixed;
+    left: 0;
+    bottom: 15%;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 10px;
+    width: 250px;
+}
+
+.botonModal {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.botonCerrarModal {
+    margin-bottom: -11px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 40px;
+    border-radius: 10px;
+    z-index: 0;
+    border: 0;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.botonCerrarModal button {
+    -webkit-box-shadow: 1px 1px 4px rgb(252, 72, 72);
+            box-shadow: 1px 1px 4px rgb(252, 72, 72);
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(61, 165, 87);
+    width: 100%;
+    border: 0;
+}
+
+.botonCerrarModal button svg {
+    width: 80%;
+    height: 80%;
+}
+
+.chatModal { 
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    background-image: url("/Media/general/whatsaapModal/patronChat.jpeg");
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+    display: none;
+}
+
+svg {
+    color: white;
+    width: 18px;
+}
+
+.chatModalImg {
+    width: 38px;
+    height: 35px;
+    border-radius: 10000px;
+}
+
+.chatModalImg img {
+    border: 1px solid #005e558a;
+    width: 38px;
+    height: 35px;
+    border-radius: 1000px;
+}
+
+.botonModal {
+    background-color: transparent;
+    width: 60px;
+    border-radius: 1000px;
+    border: none;
+}
+
+.botonModal button {
+    background-color: transparent;
+}
+
+.botonModal button, .botonModal button img {
+    cursor: pointer;
+    width: 60px;
+    border-radius: 1000px;
+    border: none;
+}
+
+
+/* HEADER CHAT */
+
+
+.chatModal header {
+    border-radius: 5px 5px 0 0;
+    background-color: #005e54;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.chatModalContacto {
+    width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.chatModalContactoUser {
+    padding-top: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 5px;
+    text-align: left;
+    color: white;
+}
+
+.chatModalContactoUser h2 {
+    line-height: 10px;
+    font-size: 15px;
+}
+
+.chatModalContactoUser span {
+    font-size: 11.5px;
+}
+
+.chatModalBotones {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+.Llamada {
+    margin-left: 7px;
+}
+
+
+/* Body chat */
+
+.chatModal section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    padding-top: 16px;
+    .mensajeCliente {
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    };
+    .mensajeCeac {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    };
+}
+
+.mensajeCliente {
+    background-color: #e1ffc7;
+    border-radius: 50px 10px 150px 50px;
+    padding: 10px;
+    width: 80px;
+    border: 1px solid #005e54;
+}
+
+.mensajeCeacChild {
+    margin-top: 12px;
+    background-color: #e1ffc7;
+    border-radius: 10px 50px 50px 100px;
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 190px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #005e54;
+}
+
+
+
+/*FOOTER*/
+
+.chatModal footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footerMensaje {
+    width: 160px;
+    min-height: 63px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
+}
+
+.footerMensajeText {
+    height: 100%;
+    p {
+        height: 100%;
+    }
+}
+
+.footerMensajeEmojis svg {
+    color: #858585;
+}
+.footerMensajeCamara svg {
+    color: rgb(110, 110, 110);
+}
+
+.footerEnviar {
+    width: 90px;
+    margin-left: 10px;
+    margin-top: 12px;
+    height: 47px;
+    background-color: #008a7c;
+    border-radius: 1000px;
+}
+
+.footerEnviar div {
+    width: 100%;
+    height: 100%;
+}
+.footerEnviarLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.footerEnviarLink svg {
+    color: white;
+    width: 75%;
+    height: 75%;
+}
+
+.mostrarChatModal {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1;
 }

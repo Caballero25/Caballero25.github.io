@@ -121,12 +121,15 @@
     .boxInfoDivOne,
     .boxInfoDivTwo {
         background-color: white;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
     }
 
     .boxInfoDivOne:hover,
     .boxInfoDivTwo:hover {
-        box-shadow: -5px -4px 15px rgba(242, 230, 207, 0.7);
+        -webkit-box-shadow: -5px -4px 15px rgba(242, 230, 207, 0.7);
+                box-shadow: -5px -4px 15px rgba(242, 230, 207, 0.7);
     }
 
     .boxInfoDivs {
@@ -134,8 +137,13 @@
     }
 
     .firstSection {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .secondSectionImage {
@@ -147,7 +155,8 @@
     .secondSectionImage img {
         width: 100%;
         border-radius: 7px;
-        box-shadow: 4px 4px 21px black;
+        -webkit-box-shadow: 4px 4px 21px black;
+                box-shadow: 4px 4px 21px black;
     }
 
     .textDivTitle {
@@ -159,6 +168,8 @@
     }
 
     .boxInfoDivs {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -210,6 +221,8 @@
     }
 
     .boxInfoDivs {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -243,6 +256,7 @@
 /* CARD COMPONENT */
 
 .card {
+    display: -ms-grid;
     display: grid;
     place-items: center;
     width: 80vw;
@@ -250,28 +264,51 @@
     height: 28.125rem;
     overflow: hidden;
     border-radius: 0.625rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 .card>* {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
 }
 
 .card__background {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     max-width: 100%;
     height: 100%;
 }
 
 .card__content {
     --flow-space: 0.9375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     height: 80%;
     padding: 22% 1.25rem 1.875rem;
+    background: -webkit-gradient(linear,
+            left top, left bottom,
+            from(hsla(0, 0%, 0%, 0)),
+            color-stop(10%, hsla(0, 0%, 0%, 0.3)),
+            to(hsl(0, 0%, 0%)));
+    background: -o-linear-gradient(top,
+            hsla(0, 0%, 0%, 0) 0%,
+            hsla(0, 0%, 0%, 0.3) 10%,
+            hsl(0, 0%, 0%) 100%);
     background: linear-gradient(180deg,
             hsla(0, 0%, 0%, 0) 0%,
             hsla(0, 0%, 0%, 0.3) 10%,
@@ -284,6 +321,7 @@
 
 .card__title {
     position: relative;
+    width: -webkit-fit-content;
     width: fit-content;
     width: -moz-fit-content;
     /* Prefijo necesario para Firefox  */
@@ -301,43 +339,81 @@
 
 @media (any-hover: hover) and (any-pointer: fine) {
     .card__content {
-        transform: translateY(62%);
+        -webkit-transform: translateY(62%);
+            -ms-transform: translateY(62%);
+                transform: translateY(62%);
+        -webkit-transition: -webkit-transform 500ms ease-out;
+        transition: -webkit-transform 500ms ease-out;
+        -o-transition: transform 500ms ease-out;
         transition: transform 500ms ease-out;
-        transition-delay: 500ms;
+        transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+        -webkit-transition-delay: 500ms;
+             -o-transition-delay: 500ms;
+                transition-delay: 500ms;
     }
 
     .card__title::after {
         opacity: 0;
-        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transition: opacity 1000ms ease-in, -webkit-transform 500ms ease-out;
+        transition: opacity 1000ms ease-in, -webkit-transform 500ms ease-out;
+        -o-transition: opacity 1000ms ease-in, transform 500ms ease-out;
         transition: opacity 1000ms ease-in, transform 500ms ease-out;
-        transition-delay: 500ms;
-        transform-origin: right;
+        transition: opacity 1000ms ease-in, transform 500ms ease-out, -webkit-transform 500ms ease-out;
+        -webkit-transition-delay: 500ms;
+             -o-transition-delay: 500ms;
+                transition-delay: 500ms;
+        -webkit-transform-origin: right;
+            -ms-transform-origin: right;
+                transform-origin: right;
     }
 
     .card__background {
+        -webkit-transition: -webkit-transform 500ms ease-in;
+        transition: -webkit-transform 500ms ease-in;
+        -o-transition: transform 500ms ease-in;
         transition: transform 500ms ease-in;
+        transition: transform 500ms ease-in, -webkit-transform 500ms ease-in;
     }
 
 
     .card:hover,
     .card:focus-within {
-        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        -webkit-transition: -webkit-transform 500ms ease-in;
+        transition: -webkit-transform 500ms ease-in;
+        -o-transition: transform 500ms ease-in;
         transition: transform 500ms ease-in;
+        transition: transform 500ms ease-in, -webkit-transform 500ms ease-in;
     }
 
     .card:hover .card__content,
     .card:focus-within .card__content {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-transition: -webkit-transform 500ms ease-in;
+        transition: -webkit-transform 500ms ease-in;
+        -o-transition: transform 500ms ease-in;
         transition: transform 500ms ease-in;
+        transition: transform 500ms ease-in, -webkit-transform 500ms ease-in;
     }
 
     .card:focus-within .card__content {
-        transition-duration: 0ms;
+        -webkit-transition-duration: 0ms;
+             -o-transition-duration: 0ms;
+                transition-duration: 0ms;
     }
 
     .card:hover .card__background,
     .card:focus-within .card__background {
-        transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+                transform: scale(1.3);
     }
 
     .card:hover .card__content--container> :not(.card__title),
@@ -345,17 +421,31 @@
     .card:focus-within .card__content--container> :not(.card__title),
     .card:focus-within .card__button {
         opacity: 1;
+        -webkit-transition: opacity 500ms ease-in;
+        -o-transition: opacity 500ms ease-in;
         transition: opacity 500ms ease-in;
-        transition-delay: 1000ms;
+        -webkit-transition-delay: 1000ms;
+             -o-transition-delay: 1000ms;
+                transition-delay: 1000ms;
     }
 
     .card:hover .card__title::after,
     .card:focus-within .card__title::after {
         opacity: 1;
-        transform: scaleX(1);
-        transform-origin: left;
+        -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+                transform: scaleX(1);
+        -webkit-transform-origin: left;
+            -ms-transform-origin: left;
+                transform-origin: left;
+        -webkit-transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+        transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+        -o-transition: opacity 500ms ease-in, transform 500ms ease-in;
         transition: opacity 500ms ease-in, transform 500ms ease-in;
-        transition-delay: 500ms;
+        transition: opacity 500ms ease-in, transform 500ms ease-in, -webkit-transform 500ms ease-in;
+        -webkit-transition-delay: 500ms;
+             -o-transition-delay: 500ms;
+                transition-delay: 500ms;
     }
 }
 
@@ -393,9 +483,16 @@
         margin-top: 40px;
     }
     .secondSectionRightCards {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }
 
@@ -407,9 +504,15 @@
         margin-top: 20px;
     }
     .secondSectionRightCards {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content:space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack:distribute;
+            justify-content:space-around;
     }
     .secondSectionLeffText {
         padding-left: 20%;
@@ -431,6 +534,8 @@
 
 @media only screen and (min-width: 1460px) {
      .secondSectionUp {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
      }
      .secondSectionLeffText {
@@ -445,17 +550,21 @@
         width: 30%;
         background-color: white;
         border-radius: 6px;
-        box-shadow: 0px 3px 5px rgb(17, 76, 85, 0.4);
+        -webkit-box-shadow: 0px 3px 5px rgb(17, 76, 85, 0.4);
+                box-shadow: 0px 3px 5px rgb(17, 76, 85, 0.4);
     }
     .secondSectionLeffText p{
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .secondSectionRightCards {
         padding-top: 60px;
         width: 70%;
     }
     .separatorDown {
-        box-shadow: 0px 3px 5px rgb(43, 43, 48, 0.4);
+        -webkit-box-shadow: 0px 3px 5px rgb(43, 43, 48, 0.4);
+                box-shadow: 0px 3px 5px rgb(43, 43, 48, 0.4);
     }
 }
 
@@ -466,9 +575,16 @@
 .sectionThreePros {
     padding: 40px 10px 30px 10px;
     height: 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .sectionThreePros h2 {
     width: 100%;
@@ -482,12 +598,20 @@
 }
 
 .sectionThreeSlider {
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#4a6eb0), to(#0799b6));
+    background-image: -o-linear-gradient(bottom left, #4a6eb0, #0799b6);
     background-image: linear-gradient(to top right, #4a6eb0, #0799b6);
     min-height: 700px;
     margin-top: 0px ;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .slider {
@@ -505,6 +629,8 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     left: calc(50% - 160px);
     top: 0;
@@ -540,6 +666,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     opacity: 0.55;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
 
@@ -582,6 +710,8 @@
         min-height: 480px;
         width: 250px;
         padding: 15px;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
         left: calc(50% - 122.5px);
     }

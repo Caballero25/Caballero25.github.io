@@ -2,15 +2,29 @@
     margin-top: 30px;
     width: 100%;
     height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .faqsFirstSectionTitleContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .faqsFirstSectionTitleContainer p {
@@ -35,9 +49,16 @@
     min-height: 600px;
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #faqsSecondSection ol,
@@ -48,10 +69,12 @@
 #faqsSecondSection ol *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #faqsSecondSection ol {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
@@ -81,7 +104,11 @@
     padding-inline: var(--card-padding-inline);
     color: var(--card-text-color);
     background-color: var(--card-background-color);
-    box-shadow:
+    -webkit-box-shadow:
+        inset 1px 1px 0px rgb(255 255 255 / .5),
+        inset -1px -1px 0px rgb(0 0 0 / .25),
+        calc(var(--outset-size) * .25) calc(var(--outset-size) * .25) calc(var(--outset-size) * .5) rgb(0 0 0 / .25);
+            box-shadow:
         inset 1px 1px 0px rgb(255 255 255 / .5),
         inset -1px -1px 0px rgb(0 0 0 / .25),
         calc(var(--outset-size) * .25) calc(var(--outset-size) * .25) calc(var(--outset-size) * .5) rgb(0 0 0 / .25);
@@ -94,7 +121,9 @@
     position: absolute;
     bottom: calc(100% - var(--number-overlap));
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     color: var(--accent-color);
     font-family: var(--number-font-family);
     font-weight: var(--number-font-weight);
@@ -111,7 +140,8 @@
     height: 90%;
     bottom: calc(var(--outset-size) * -0.1);
     left: calc(var(--outset-size) * -1);
-    box-shadow: -10px 5px var(--accent-color);
+    -webkit-box-shadow: -10px 5px var(--accent-color);
+            box-shadow: -10px 5px var(--accent-color);
 }
 
 /* card content */
@@ -151,20 +181,29 @@
     padding-top: 25px;
     padding-bottom: 35px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding-left: 20vw;
     padding-right: 20vw;
     background-image: url("/Media/faqs/patronFaqs.png");
 }
 
 .faqsThirdSection > :first-child {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .faqsThirdSection > :last-child {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .faqsThirdSectioncontainer {
@@ -174,11 +213,13 @@
     margin: 0 auto;
     padding: 4rem;
     width: 48rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
     &::before,
     &::after {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
     }
 }
 
@@ -266,6 +307,8 @@
         +.faqsThirdSectionaccordion-content {
             opacity: 1;
             max-height: 90em;
+            -webkit-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
             transition: all 200ms linear;
             will-change: opacity, max-height;
         }
@@ -275,6 +318,8 @@
         opacity: 0;
         max-height: 0;
         overflow: hidden;
+        -webkit-transition: opacity 200ms linear, max-height 200ms linear;
+        -o-transition: opacity 200ms linear, max-height 200ms linear;
         transition: opacity 200ms linear, max-height 200ms linear;
         will-change: opacity, max-height;
 
@@ -337,6 +382,7 @@
         padding-left: 10px;
     }
     #faqsSecondSection ol {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     }
@@ -351,10 +397,19 @@
 
 .fourthSectioncontainer {
     margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 180px;
     background-color: #014257;
   }
@@ -380,7 +435,8 @@
   }
   
   .fourthSectionBtn:hover {
-    box-shadow: 1px 1px 25px 10px rgba(37, 211, 102, 0.4);
+    -webkit-box-shadow: 1px 1px 25px 10px rgba(37, 211, 102, 0.4);
+            box-shadow: 1px 1px 25px 10px rgba(37, 211, 102, 0.4);
   }
   
   .fourthSectionBtn:before {
@@ -390,16 +446,23 @@
     left: -100%;
     width: 100%;
     height: 100%;
+    background: -o-linear-gradient(
+      330deg,
+      transparent,
+      rgba(37, 211, 102, 0.4),
+      transparent
+    );
     background: linear-gradient(
       120deg,
       transparent,
       rgba(37, 211, 102, 0.4),
       transparent
     );
+    -webkit-transition: all 650ms;
+    -o-transition: all 650ms;
     transition: all 650ms;
   }
   
   .fourthSectionBtn:hover:before {
     left: 100%;
   }
-  
